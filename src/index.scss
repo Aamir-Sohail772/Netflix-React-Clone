@@ -40,7 +40,8 @@ body {
 .skeleton {
   position: relative;
   overflow: hidden;
-  background-color: #0a2955;
+  // background-color: #0a2955;
+  background-color: #0e0f0f;
   &::after {
     position: absolute;
     top: 0;
