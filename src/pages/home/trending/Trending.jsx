@@ -5,8 +5,9 @@ import useFetch from "../../../hooks/useFetch";
 import Carousel from "../../../components/carousel/Carousel";
 
 const Trending = () => {
-    const [endPoint, setEndPoint] = useState("day");
-    const {data, loading}  = useFetch(`/trending/all/${endPoint}`)
+    const [endpoint, setEndPoint] = useState("day");
+    const {data, loading}  = useFetch(`/trending/all/${endpoint}`)
+    // const { data, loading } = useFetch(`/trending/movie/${endpoint}`);
     const onTabChange = (tab) => {
     setEndPoint(tab === "Day" ? "day" : "week")
   };
@@ -26,7 +27,7 @@ const Trending = () => {
 export default Trending;
 
 
-// import React, { useState } from "react";
+// import { useState } from "react";
 
 // import Carousel from "../../../components/carousel/Carousel";
 // import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
