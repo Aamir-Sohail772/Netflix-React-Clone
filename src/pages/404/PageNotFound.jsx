@@ -1,4 +1,4 @@
-import "./PageNotFound.scss";
+import "./pageNotFound.scss";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 
 const PageNotFound = () => {
