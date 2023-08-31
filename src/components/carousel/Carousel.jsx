@@ -16,11 +16,13 @@ import dayjs from "dayjs";
 import CircleRating from "../circleRating/CircleRating";
 import Genres from "../genres/Genres";
 
+
 const Carousel = ({ data, loading, endpoint, title }) => {
   const carouselContainer = useRef();
   //   console.log(carouselContainer.current)
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
+  
   const navigation = (dir) => {
     const container = carouselContainer.current;
 
@@ -69,11 +71,11 @@ const Carousel = ({ data, loading, endpoint, title }) => {
               return (
                 <div
                   key={item.id}
-                  className="carouselItem"
+                  className="carouselItem cardHover"
                   onClick={() =>
                     navigate(`/${item.media_type || endpoint}/${item.id}`)
                   }
-                >
+                >                
                   <div className="posterBlock">
                     <Img src={posterUrl} />
                     <CircleRating rating={item.vote_average.toFixed(1)} />

@@ -72,11 +72,11 @@ const Header = () => {
   return (
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
-        <div className="logo" onClick={()=>navigate("/")}>
+        <div className="logo" onClick={() => navigate("/")}>
           <img src={logo} alt="" />
         </div>
         <ul className="menuItems">
-          <li className="menuItem" onClick={()=>navigate("/")}>
+          <li className="menuItem" onClick={() => navigate("/")}>
             <AiFillHome />
           </li>
           {/* <li className="menuItem" ><BiMoviePlay/></li> */}
@@ -87,19 +87,23 @@ const Header = () => {
             TV Shows
           </li>
           <li className="menuItem">
-            <MdFavoriteBorder />My List
+            <MdFavoriteBorder />
+            My List
           </li>
           <li className="menuItem">
-            <MdSubscriptions />Subscriptions
+            <MdSubscriptions />
+            Subscriptions
           </li>
           <li className="menuItem">
-            <MdDarkMode />Theme
+            <MdDarkMode />
+            Theme
           </li>
           <li className="menuItem">
             <HiOutlineSearch onClick={openSearch} />
           </li>
           <li className="menuItem">
-            <MdManageAccounts />Profile
+            <MdManageAccounts />
+            Profile
           </li>
           <li className="menuItem">
             <AiOutlineLogout /> Log Out

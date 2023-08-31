@@ -16,7 +16,7 @@ const MovieCard = ({ data, fromSearch, mediaType }) => {
     : PosterFallback;
   return (
     <div
-      className="movieCard"
+      className="movieCard posterBlock"
       onClick={() => navigate(`/${data.media_type || mediaType}/${data.id}`)}
     >
       <div className="posterBlock">

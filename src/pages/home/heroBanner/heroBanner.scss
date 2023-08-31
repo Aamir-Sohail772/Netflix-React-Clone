@@ -33,11 +33,7 @@
     height: 250px;
     background: linear-gradient(
       180deg,
-      // rgba(4,21,45,0) 0%,
-      // #04152d 79.17%
-      // rgba(0, 9, 20, 0) 0%,
       rgba(4, 21, 45, 0) 0%,
-      // #070709f6 79.17%
       #010103f6 79.17%
     );
     position: absolute;
@@ -48,7 +44,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // color: white;
     color: greenyellow;
     text-align: center;
     position: relative;
@@ -78,7 +73,6 @@
       input {
         width: calc(100% - 100px);
         height: 50px;
-        // background-color: white;
         background-color: greenyellow;
         outline: 0;
         border: 0;
@@ -96,7 +90,6 @@
         width: 100px;
         height: 50px;
         background: var(--gradient);
-        // color: white;
         color: greenyellow;
         outline: 0;
         border: 0;
