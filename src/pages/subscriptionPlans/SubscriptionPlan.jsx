@@ -1,4 +1,4 @@
-import "./SubscriptionPlan.scss";
+import "./subscriptionPlan.scss";
 
 const subscriptionOptions = [
   {
