@@ -1,0 +1,93 @@
+.subscription-page {
+    background-color: black;
+    color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    // height: 95vh;
+    // height: 67vh;
+  
+    h1 {
+      font-size: 24px;
+    //   margin-bottom: 20px;
+      margin-top: 50px;
+    }
+  
+    .subscription-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  
+      .subscription-option {
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 200px;
+        margin: 10px;
+  
+        h2 {
+          font-size: 18px;
+        }
+  
+        p {
+          font-size: 16px;
+          margin-top: 10px;
+        }
+  
+        button {
+          background-color: red; // Red button color
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          cursor: pointer;
+          margin: 20px;
+        }
+      }
+    }
+  
+  
+  
+    // Media query for screens with a maximum width of 480px (mobile devices)
+    @media (max-width: 480px) {
+      height: 200vh;
+      .subscription-option {
+        width: 90%;
+        height: 200px; // Adjust the height for better mobile layout
+      }
+    }
+  
+    // Media query for screens with a minimum width of 481px and a maximum width of 1024px (tablets and smaller desktop screens)
+    @media (min-width: 481px) and (max-width: 1024px) {
+      .subscription-options {
+        justify-content: space-between;
+      }
+  
+      .subscription-option {
+        width: 45%;
+        height: 250px; // Adjust the height for tablet and small desktop layout
+      }
+      button {
+        margin-top: 30px;
+      }
+    }
+  
+    // Media query for screens with a minimum width of 1025px (large screens)
+    @media (min-width: 1025px) {
+      .subscription-options {
+        justify-content: space-around;
+        margin-top: 40px;
+      }
+  
+      .subscription-option {
+        width: 100vw;
+        height: 250px; // Set a fixed height for large screens
+      }
+      button{
+        margin-top: 50px;
+      }
+    }
+  }

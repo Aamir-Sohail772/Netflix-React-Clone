@@ -90,7 +90,7 @@ const Header = () => {
             <MdFavoriteBorder />
             My List
           </li>
-          <li className="menuItem">
+          <li className="menuItem" onClick={()=> navigate("/subscriptionPlan")}>
             <MdSubscriptions />
             Subscriptions
           </li>
