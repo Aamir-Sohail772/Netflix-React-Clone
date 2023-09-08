@@ -15,8 +15,8 @@ import { AiFillHome, AiOutlineLogout } from "react-icons/ai";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import logo from "../../assets/logo.svg";
 
-import { useContext } from "react";
-import { AuthContext } from "../../context/AuthContext";
+// import { useContext } from "react";
+// import { AuthContext } from "../../context/AuthContext";
 import { current } from "@reduxjs/toolkit";
 
 const Header = () => {
@@ -29,7 +29,7 @@ const Header = () => {
   const location = useLocation();
 
   // Add Profile Update starting here
-  const { currentUser } = useContext(AuthContext);
+  // const { currentUser } = useContext(AuthContext);
   // console.log(currentUser);
 
   useEffect(() => {
@@ -123,7 +123,7 @@ const Header = () => {
             <AiOutlineLogout /> Sign Up
           </li>
           {/* Add Profile  */}
-          <li className="menuItem">
+          {/* <li className="menuItem">
             <div className="navbarRight">
               <img
                 className="profileImg"
@@ -136,7 +136,7 @@ const Header = () => {
               />
               <span className="navbarName">{currentUser.displayName}</span>
             </div>
-          </li>
+          </li> */}
         </ul>
         <div className="mobileMenuItems">
           <HiOutlineSearch onClick={openSearch} />
