@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./subscriptionPlan.scss";
 
 const subscriptionOptions = [
@@ -40,7 +41,9 @@ const SubscriptionPlan = () => {
             <h2>{option.plan}</h2>
             <p>{option.price}</p>
             <p>{option.description}</p>
+            <Link to={"/login"}>
             <button>Subscribe</button>
+            </Link>
           </div>
         ))}
       </div>

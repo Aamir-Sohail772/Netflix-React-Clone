@@ -1,0 +1,20 @@
+.sidebar {
+    flex: 2.5;
+    // height: calc(100vh - 51px);
+    height:140vh;
+    border-right: solid 1px red;
+    background-color: black;
+    color: greenyellow;
+    
+    .sidebarWrapper {
+      padding: 20px;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 940px) {
+    .sidebar {
+      flex: 1;
+    }
+  }
+  

@@ -1,0 +1,33 @@
+.menuLink {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 30px 0px;
+    width: 250px;
+    .menuLinkText {
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+    .menuLinkTextName{
+      text-transform: capitalize;
+    }
+  
+    &:hover {
+      // background-color: rgb(240, 238, 238);
+      background-color: rgb(203, 18, 18);
+    }
+  }
+  
+  
+  
+  @media only screen and (max-width: 940px){
+    .menuLinkText{
+        display: none;
+    }
+    .menuLinkTextName{
+      display: none;
+    }
+  }

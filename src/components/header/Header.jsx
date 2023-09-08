@@ -7,13 +7,17 @@ import { useNavigate, useLocation } from "react-router-dom";
 import {
   MdSubscriptions,
   MdManageAccounts,
-  MdDarkMode,
+  // MdDarkMode,
   MdFavoriteBorder,
 } from "react-icons/md";
 import { AiFillHome, AiOutlineLogout } from "react-icons/ai";
 // import {BiMoviePlay} from "react-icons/bi"
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import logo from "../../assets/logo.svg";
+
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+import { current } from "@reduxjs/toolkit";
 
 const Header = () => {
   const [show, setShow] = useState("top");
@@ -23,6 +27,10 @@ const Header = () => {
   const [showSearch, setShowSearch] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
+
+  // Add Profile Update starting here
+  const { currentUser } = useContext(AuthContext);
+  // console.log(currentUser);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -90,23 +98,44 @@ const Header = () => {
             <MdFavoriteBorder />
             My List
           </li>
-          <li className="menuItem" onClick={()=> navigate("/subscriptionPlan")}>
+          <li
+            className="menuItem"
+            onClick={() => navigate("/subscriptionPlan")}
+          >
             <MdSubscriptions />
             Subscriptions
           </li>
-          <li className="menuItem">
+          {/* <li className="menuItem">
             <MdDarkMode />
             Theme
-          </li>
+          </li> */}
           <li className="menuItem">
             <HiOutlineSearch onClick={openSearch} />
           </li>
-          <li className="menuItem">
+          <li className="menuItem profile" onClick={() => navigate("/profile")}>
             <MdManageAccounts />
             Profile
           </li>
+          <li className="menuItem" onClick={() => navigate("/login")}>
+            <AiOutlineLogout /> Log In
+          </li>
+          <li className="menuItem" onClick={() => navigate("/register")}>
+            <AiOutlineLogout /> Sign Up
+          </li>
+          {/* Add Profile  */}
           <li className="menuItem">
-            <AiOutlineLogout /> Log Out
+            <div className="navbarRight">
+              <img
+                className="profileImg"
+                src={
+                  currentUser.photoURL
+                    ? currentUser.photoURL
+                    : "../../../assets2/DefaultProfile.jpg"
+                }
+                alt=""
+              />
+              <span className="navbarName">{currentUser.displayName}</span>
+            </div>
           </li>
         </ul>
         <div className="mobileMenuItems">
