@@ -53,7 +53,7 @@ const Login = () => {
           dispatch({ type: "LOGIN_SUCCESS", payload: user });
 
           // console.log(user);
-          navigate("/home");
+          navigate("/");
         }
       );
     } catch (error) {
@@ -70,7 +70,7 @@ const Login = () => {
         // console.log(result);
         const user = result.user;
         dispatch({ type: "LOGIN_SUCCESS", payload: user });
-        navigate("/home");
+        navigate("/");
       })
       .catch((error) => {
         dispatch({ type: "LOGIN_FAILURE" });

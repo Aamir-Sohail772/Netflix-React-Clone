@@ -80,11 +80,11 @@ const Header = () => {
   return (
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
-        <div className="logo" onClick={() => navigate("/home")}>
+        <div className="logo" onClick={() => navigate("/")}>
           <img src={logo} alt="" />
         </div>
         <ul className="menuItems">
-          <li className="menuItem" onClick={() => navigate("/home")}>
+          <li className="menuItem" onClick={() => navigate("/")}>
             <AiFillHome />
           </li>
           {/* <li className="menuItem" ><BiMoviePlay/></li> */}
