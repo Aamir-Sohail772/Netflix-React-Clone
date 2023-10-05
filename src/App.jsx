@@ -72,7 +72,7 @@ function App() {
           <Route path="/profile" element={<AuthRoute><Sidebar /></AuthRoute>} />
 
           <Route
-            path="/"
+            path="/home"
             element={
               <AuthRoute>
                 <Home />
